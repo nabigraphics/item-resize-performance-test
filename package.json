@@ -1,0 +1,36 @@
+{
+  "name": "rspack-react-ts-starter",
+  "packageManager": "pnpm@9.1.0",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "NODE_ENV=development rspack serve",
+    "build": "NODE_ENV=production rspack build",
+    "start": "serve dist"
+  },
+  "dependencies": {
+    "@vanilla-extract/css": "^1.15.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "engines": {
+    "node": "^20",
+    "pnpm": "9.1.0"
+  },
+  "devDependencies": {
+    "@rspack/cli": "0.6.5",
+    "@rspack/core": "0.6.5",
+    "@rspack/plugin-react-refresh": "0.6.5",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@vanilla-extract/webpack-plugin": "^2.3.8",
+    "react-refresh": "^0.14.0",
+    "serve": "^14.2.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "18.3.1",
+      "react-dom": "18.3.1"
+    }
+  }
+}
