@@ -7,6 +7,9 @@ const isDev = process.env.NODE_ENV === "development";
  */
 module.exports = {
   context: __dirname,
+  devServer: {
+    historyApiFallback: true,
+  },
   entry: {
     main: "./src/main.tsx",
   },
@@ -56,6 +59,7 @@ module.exports = {
     new rspack.ProgressPlugin({}),
     new rspack.HtmlRspackPlugin({
       template: "./index.html",
+      publicPath: "/",
     }),
     isDev
       ? new refreshPlugin({
