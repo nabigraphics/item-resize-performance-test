@@ -13,7 +13,7 @@ export const GridItem = forwardRef<HTMLDivElement, GridItemProps>(
   (props, ref) => {
     const { id, size } = props;
     return (
-      <div ref={ref} className={styles.col}>
+      <div ref={ref} className={styles.col} data-id={id}>
         <Box>
           <div className={styles.item}>
             Item {id} - {size}

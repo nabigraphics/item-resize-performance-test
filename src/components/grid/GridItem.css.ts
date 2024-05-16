@@ -12,9 +12,6 @@ export const col = style({
   margin: 0,
   boxSizing: "border-box",
   width: "100%",
-  resize: "both",
-  overflow: "scroll",
-  display: "inline",
   selectors: {
     // 100% / {gap} * {여백 갯수} / {컬럼 갯수}
     [`.column-count-2 &`]: {
@@ -22,6 +19,10 @@ export const col = style({
     },
     [`.column-count-3 &`]: {
       maxWidth: `calc(100% / 3 - (8px * 2 / 3))`,
+    },
+    [`.resize-mode &`]: {
+      resize: "both",
+      overflow: "scroll",
     },
   },
 });
