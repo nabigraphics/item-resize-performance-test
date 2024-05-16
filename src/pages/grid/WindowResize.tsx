@@ -1,5 +1,5 @@
-import { useCalculatedColumnCount } from "../../useCalculatedColumnCount";
-import { useSizeByColumnCount } from "../../useSizeByColumnCount";
+import { useCalculatedColumnCount } from "../../libs/grid/useCalculatedColumnCount";
+import { useSizeByColumnCount } from "../../libs/grid/useSizeByColumnCount";
 import { Grid, GridItem } from "../../components/grid";
 
 const items = new Array(1000).fill(0).map((_, index) => index + 1);

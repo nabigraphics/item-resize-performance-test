@@ -1,7 +1,7 @@
 import { ResizeObserver as Polyfill } from "@juggle/resize-observer";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
-import { useCalculatedColumnCount } from "../../useCalculatedColumnCount";
+import { useCalculatedColumnCount } from "../../libs/grid/useCalculatedColumnCount";
 import { Grid, GridItem, GridItemProps } from "../../components/grid";
 import { ItemSize } from "../../types";
 

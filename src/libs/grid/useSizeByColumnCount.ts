@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-import { ColumnCountWithoutAuto, ItemSize } from "./libs/grid/types";
+import { ColumnCountWithoutAuto, ItemSize } from "./types";
 import {
   gridSizeByColumnCountManager,
   SizeByColumnCount,
-} from "./libs/grid/sizeByColumnCount";
+} from "./sizeByColumnCount";
 
 export interface UseSizeByColumnCountOptions {
   calculatedColumnCount: ColumnCountWithoutAuto;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
-import { gridColumnCountManager } from "./libs/grid/columnCount";
-import { ColumnCount, ColumnCountWithoutAuto } from "./libs/grid/types";
+import { gridColumnCountManager } from "./columnCount";
+import { ColumnCount, ColumnCountWithoutAuto } from "./types";
 
 if (typeof window !== "undefined") {
   gridColumnCountManager.init();
