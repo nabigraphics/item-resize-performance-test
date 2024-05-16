@@ -1,10 +1,11 @@
+import { ResizeObserver as Polyfill } from "@juggle/resize-observer";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 import { useCalculatedColumnCount } from "../../useCalculatedColumnCount";
 import { Grid, GridItem, GridItemProps } from "../../components/grid";
 import { ItemSize } from "../../types";
 
-const ResizeObserver = window.ResizeObserver;
+const ResizeObserver = Polyfill;
 const MEDIUM_SIZE_THUMBNAIL_MIN_WIDTH = 158;
 
 interface Subs {
@@ -22,7 +23,6 @@ function createResizeObserverSingleton() {
 
   const ro = new ResizeObserver((entries) => {
     entries.forEach((entry) => {
-      console.log("entry", entry.target);
       const { inlineSize: width, blockSize: height } = entry.contentBoxSize[0];
       const callback = subscribers.get(entry.target);
       if (callback) {
@@ -119,7 +119,7 @@ const ResizeObserverProvider = (props: ResizeObserverProviderProps) => {
 
 const items = new Array(1000).fill(0).map((_, index) => index + 1);
 
-export const GridResizeObserverNativePage = () => {
+export const GridResizeObserverPolyfillPage = () => {
   const columnCount = 2;
 
   const calculatedColumnCount = useCalculatedColumnCount({
@@ -129,7 +129,7 @@ export const GridResizeObserverNativePage = () => {
 
   return (
     <div>
-      <h2>Grid Resize Observer Page (Native)</h2>
+      <h2>Grid Resize Observer Page (Polyfill + Single Observer)</h2>
       <ResizeObserverProvider>
         <Grid columnCount={calculatedColumnCount}>
           {items.map((item) => {

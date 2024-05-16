@@ -10,11 +10,11 @@ import {
 import "./styles/global.css";
 
 import { App } from "./App";
-import { GridResizeObserverNativePage } from "./pages/grid/ResizeObserverNative";
+import { GridResizeObserverNativeSingleObserverPage } from "./pages/grid/ResizeObserverNativeSingleObserver";
 import { CarouselResizeObserverPage } from "./pages/carousel/ResizeObserver";
 import { CarouselWindowResizePage } from "./pages/carousel/WindowResize";
 import { GridWindowResizePage } from "./pages/grid/WindowResize";
-import { GridResizeObserverPolyfillPage } from "./pages/grid/ResizeObserverPolyfill";
+import { GridResizeObserverPolyfillPage } from "./pages/grid/ResizeObserverPolyfillSingleObserver";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,13 +28,21 @@ const router = createBrowserRouter(
         element={<CarouselWindowResizePage />}
       />
       <Route
-        path="grid/resize-observer-native"
-        element={<GridResizeObserverNativePage />}
+        path="grid/resize-observer-native-single-observer"
+        element={<GridResizeObserverNativeSingleObserverPage />}
       />
+      {/* <Route
+        path="grid/resize-observer-native-multiple-observers"
+        element={<GridResizeObserverNativeSingleObserverPage />}
+      /> */}
       <Route
-        path="grid/resize-observer-polyfill"
+        path="grid/resize-observer-polyfill-single-observer"
         element={<GridResizeObserverPolyfillPage />}
       />
+      {/* <Route
+        path="grid/resize-observer-polyfill-multiple-observers"
+        element={<GridResizeObserverPolyfillPage />}
+      /> */}
       <Route path="grid/window-resize" element={<GridWindowResizePage />} />
     </Route>
   )
