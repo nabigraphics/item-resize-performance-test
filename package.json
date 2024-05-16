@@ -9,7 +9,10 @@
     "start": "serve dist"
   },
   "dependencies": {
+    "@juggle/resize-observer": "^3.4.0",
     "@vanilla-extract/css": "^1.15.1",
+    "clsx": "^2.1.1",
+    "lodash": "^4.17.21",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-router-dom": "^6.23.1"
@@ -22,6 +25,7 @@
     "@rspack/cli": "0.6.5",
     "@rspack/core": "0.6.5",
     "@rspack/plugin-react-refresh": "0.6.5",
+    "@types/lodash": "^4.17.1",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vanilla-extract/webpack-plugin": "^2.3.8",

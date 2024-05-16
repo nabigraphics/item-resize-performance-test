@@ -10,10 +10,11 @@ import {
 import "./styles/global.css";
 
 import { App } from "./App";
-import { GridResizeObserverPage } from "./pages/grid/ResizeObserver";
+import { GridResizeObserverNativePage } from "./pages/grid/ResizeObserverNative";
 import { CarouselResizeObserverPage } from "./pages/carousel/ResizeObserver";
 import { CarouselWindowResizePage } from "./pages/carousel/WindowResize";
 import { GridWindowResizePage } from "./pages/grid/WindowResize";
+import { GridResizeObserverPolyfillPage } from "./pages/grid/ResizeObserverPolyfill";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -26,7 +27,14 @@ const router = createBrowserRouter(
         path="carousel/window-resize"
         element={<CarouselWindowResizePage />}
       />
-      <Route path="grid/resize-observer" element={<GridResizeObserverPage />} />
+      <Route
+        path="grid/resize-observer-native"
+        element={<GridResizeObserverNativePage />}
+      />
+      <Route
+        path="grid/resize-observer-polyfill"
+        element={<GridResizeObserverPolyfillPage />}
+      />
       <Route path="grid/window-resize" element={<GridWindowResizePage />} />
     </Route>
   )

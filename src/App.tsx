@@ -16,7 +16,14 @@ export const App = () => {
             <Link to="/carousel/window-resize">캐러셀 - Window Resize</Link>
           </li>
           <li>
-            <Link to="/grid/resize-observer">그리드 - ResizeObserver</Link>
+            <Link to="/grid/resize-observer-native">
+              그리드 - ResizeObserver (Native)
+            </Link>
+          </li>
+          <li>
+            <Link to="/grid/resize-observer-polyfill">
+              그리드 - ResizeObserver (Polyfill)
+            </Link>
           </li>
           <li>
             <Link to="/grid/window-resize">그리드 - Window Resize</Link>
