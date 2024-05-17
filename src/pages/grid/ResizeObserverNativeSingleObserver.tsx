@@ -6,7 +6,7 @@ import { createResizeObserverContext } from "../../libs/resize-observer/Context"
 
 const MEDIUM_SIZE_THUMBNAIL_MIN_WIDTH = 158;
 
-const items = new Array(10).fill(0).map((_, index) => index + 1);
+const items = new Array(1000).fill(0).map((_, index) => index + 1);
 
 const { Provider, useItemObserve, useSelector } = createResizeObserverContext({
   ResizeObserver: window.ResizeObserver,
@@ -17,7 +17,7 @@ export const GridResizeObserverNativeSingleObserverPage = () => {
 
   const calculatedColumnCount = useCalculatedColumnCount({
     defaultColumnCount: columnCount,
-    columnCount: 2,
+    columnCount: "auto",
   });
 
   return (

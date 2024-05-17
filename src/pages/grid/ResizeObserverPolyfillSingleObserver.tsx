@@ -19,7 +19,7 @@ export const GridResizeObserverPolyfillPage = () => {
 
   const calculatedColumnCount = useCalculatedColumnCount({
     defaultColumnCount: columnCount,
-    columnCount: 2,
+    columnCount: "auto",
   });
 
   return (

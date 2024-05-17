@@ -9,12 +9,12 @@ export const App = () => {
           <li>
             <Link to="/">홈</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/carousel/resize-observer">캐러셀 - ResizeObserver</Link>
           </li>
           <li>
             <Link to="/carousel/window-resize">캐러셀 - Window Resize</Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/grid/resize-observer-native-single-observer">
               그리드 - ResizeObserver (Native + Single Observer)
