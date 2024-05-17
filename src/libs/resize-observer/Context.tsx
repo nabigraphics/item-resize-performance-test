@@ -48,12 +48,10 @@ export function createResizeObserverContext(
 
       if (store && element) {
         const unsubscribe = store.observe(element);
-        console.log("# onbserve node", element);
         unobserveRef.current = unsubscribe;
       }
 
       if (!element && store && unobserve) {
-        console.log("# unobserve node", store, unobserve);
         unobserve();
       }
     };
@@ -83,7 +81,6 @@ export function createResizeObserverContext(
     const storeRef = useRef<ResizeObserverStore | null>(null);
 
     if (!storeRef.current && typeof window !== "undefined") {
-      console.log("set storeRef", storeRef.current);
       storeRef.current = createResizeObserverStore({
         ResizeObserver,
       });
